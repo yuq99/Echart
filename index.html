@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>企业接诉即办</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/comon0.css" />
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+  <style>
+    /*   img{
+  position: absolute;
+	left: 50%;
+	top: 75%;
+	transform: translate(-50%,-50%);
+} */
+    body {
+      text-align: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 style="color:dodgerblue;">企业接诉即办</h1>
+    <div class="showTime"></div>
+    <script>
+      var t = null;
+      t = setTimeout(time, 1000); //開始运行
+      function time() {
+        clearTimeout(t); //清除定时器
+        dt = new Date();
+        var y = dt.getFullYear();
+        var mt = dt.getMonth() + 1;
+        var day = dt.getDate();
+        var h = dt.getHours(); //获取时
+        var m = dt.getMinutes(); //获取分
+        var s = dt.getSeconds(); //获取秒
+        document.querySelector(".showTime").innerHTML =
+          "当前时间：" +
+          y +
+          "年" +
+          mt +
+          "月" +
+          day +
+          "-" +
+          h +
+          "时" +
+          m +
+          "分" +
+          s +
+          "秒";
+        t = setTimeout(time, 1000); //设定定时器，循环运行
+      }
+    </script>
+  </header>
+  <section class="mainbox">
+
+    <div class="column" style="width:3.75rem;">
+      <div class="panelzdy bar">
+        <!-- qdph-qd1 -->
+        <h2> <a data-toggle="modal" href="#qdph-qd1" class=" btn btn-primary">渠道排行</a></h2>
+
+
+        <div class="navboxall">
+          <table id="tab" class="table1" width="100%" cellspacing="0" cellpadding="0">
+            <tbody class="QDPH">
+              <tr>
+                <th scope="col">排名</th>
+                <th scope="col">公司</th>
+                <th scope="col">数量</th>
+
+              </tr>
+              <tr>
+                <td><span>1</span></td>
+                <td>企业复工复产</td>
+                <td>83<br></td>
+
+              </tr>
+              <tr>
+                <td><span>2</span></td>
+                <td>企航直通中心</td>
+                <td>365</td>
+
+              </tr>
+
+              <tr>
+                <td><span>3</span></td>
+                <td>市12345</td>
+                <td>0</td>
+
+              </tr>
+              <tr>
+                <td><span>4</span></td>
+                <td>部门主动服务</td>
+                <td>0</td>
+
+              </tr>
+              <tr>
+                <td><span>5</span></td>
+                <td>海淀通APP</td>
+                <td>0</td>
+
+              </tr>
+              <tr>
+                <td><span>6</span></td>
+                <td>掌上海淀APP</td>
+                <td>0</td>
+
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="panelzdy-footer"></div>
+      </div>
+
+      <div class="panelzdy line1" style="width:3.75rem;height: 7.938rem;">
+        <h2> <a data-toggle="modal" href="#gd" class=" btn btn-primary">企业工单TOP10</a></h2>
+
+
+        <ul class="clearfix" style="font-size: 14px;color: rgba(255,255,255,.4);">
+          <li>
+            <div style="height:7rem;">
+
+              <div class="navboxall">
+                <div class="wraptit2" style="border-bottom: 1px solid ;"><span
+                    style="margin-right:0.7rem;">排名</span><span style="margin-right:0.7rem;">企业名称</span> </div>
+                <div class="wrap">
+                  <ul>
+                    <li>
+                      <p><span class="zdyyidong">1</span><span>北京么哒互动文化发...</span></p>
+                    </li>
+                    <li>
+                      <p><span class="zdyyidong">2</span><span>北京新锐互联科技有...</span></p>
+                    </li>
+                    <li>
+                      <p><span class="zdyyidong">3</span><span>北京润通丰华科技有...</span></p>
+                    </li>
+                    <li>
+                      <p><span class="zdyyidong">4</span><span>北京城建集团有限责...</span></p>
+                    </li>
+                    <li>
+                      <p><span class="zdyyidong">5</span><span>北京华商基业管理咨...</span></p>
+                    </li>
+                    <li>
+                      <p><span class="zdyyidong">6</span><span>北京恬适健康管理有...</span></p>
+                    </li>
+                    <li>
+                      <p><span class="zdyyidong">7</span><span>北京鑫康合生物医药...</span></p>
+                    </li>
+                    <li>
+                      <p><span class="zdyyidong">8</span><span>北京亿连华泰酒店有...</span></p>
+                    </li>
+                    <li>
+                      <p><span class="zdyyidong">9</span><span>北京权品品牌管理有...</span></p>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="panelzdy-footer"></div>
+      </div>
+
+
+    </div>
+
+    <div class="modal fade" id="ybyn-4" data-backdrop="true">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">一般、疑难详细</h2>
+          <!-- 模态弹出窗内容 -->
+          <form class="form-horizontal" role="form" style="color: white;">
+            <fieldset disabled>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_host">公司名称</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_host" type="text" value="北京联信通移动互联公司" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_name">数量</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="83" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_username">类型</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_username" type="text" value="民企" />
+                </div>
+
+              </div>
+            </fieldset>
+            <fieldset>
+
+              <div class="form-group">
+                <label for="disabledSelect" class="col-sm-2 control-label">内容</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3">
+本企业在背景，海淀区北京大学旁，受疫情影响以及停产153天,目前北京已经解除,是否可以复工。
+                    </textarea>
+
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- 模态弹出窗 [渠道排行]-->
+    <div class="modal fade" id="qdph-qd1" data-backdrop="true">
+
+      <!--data-backdrop="static"单击背景不关闭弹出窗，默认值为data-backdrop="true"-->
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn">
+          <!-- style="background: rgba(255, 255, 255, 0.04) url(../images/line\(1\).png);" -->
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">渠道排行</h2>
+
+          <!-- 模态弹出窗内容 -->
+
+          <div class="navboxall">
+            <table id="tab" class="table1" width="100%" cellspacing="0" cellpadding="0">
+              <tbody class="QDPH">
+                <tr style="font-size: 18px !important;">
+                  <th scope="col">排名</th>
+                  <th scope="col">公司</th>
+                  <th scope="col">数量</th>
+
+                </tr>
+                <tr>
+                  <td><span>1</span></td>
+                  <td>企业复工复产</td>
+                  <td>83<br></td>
+
+                </tr>
+                <tr>
+                  <td><span>2</span></td>
+                  <td>企航直通中心</td>
+                  <td>365</td>
+
+                </tr>
+
+                <tr>
+                  <td><span>3</span></td>
+                  <td>市12345</td>
+                  <td>0</td>
+
+                </tr>
+                <tr>
+                  <td><span>4</span></td>
+                  <td>部门主动服务</td>
+                  <td>0</td>
+
+                </tr>
+                <tr>
+                  <td><span>5</span></td>
+                  <td>海淀通APP</td>
+                  <td>0</td>
+
+                </tr>
+                <tr>
+                  <td><span>6</span></td>
+                  <td>掌上海淀APP</td>
+                  <td>0</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- 模态弹出窗 [承办单位]-->
+    <div class="modal fade" id="modals" data-backdrop="true">
+
+      <!--data-backdrop="static"单击背景不关闭弹出窗，默认值为data-backdrop="true"-->
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn">
+          <!-- style="background: rgba(255, 255, 255, 0.04) url(../images/line\(1\).png);" -->
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">承办单位</h2>
+
+          <!-- 模态弹出窗内容 -->
+
+
+          <div class="chart22" style="height: 7rem;width: 9rem;top:20px"></div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 模态弹出窗 [工单状态]-->
+    <div class="modal fade" id="modals2" data-backdrop="true">
+
+      <!--data-backdrop="static"单击背景不关闭弹出窗，默认值为data-backdrop="true"-->
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">工单状态</h2>
+
+          <!-- 模态弹出窗内容 -->
+
+
+          <div class="chart33" style="height: 7rem;width: 9rem;top:20px"></div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- 模态弹出窗 [企业类型]-->
+    <div class="modal fade" id="modals-qylx" data-backdrop="true">
+
+      <!--data-backdrop="static"单击背景不关闭弹出窗，默认值为data-backdrop="true"-->
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">企业类型</h2>
+
+          <!-- 模态弹出窗内容 -->
+
+
+          <div class="chartqylx" style="height: 7rem;width: 9rem;top:20px"></div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 模态弹出窗 [热点问题]-->
+    <div class="modal fade" id="modals-rdwt" data-backdrop="true">
+
+      <!--data-backdrop="static"单击背景不关闭弹出窗，默认值为data-backdrop="true"-->
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">热点问题</h2>
+
+          <!-- 模态弹出窗内容 -->
+
+
+          <div class="chartrdwt" style="height: 7rem;width: 9rem;top:20px"></div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 模态弹出窗 [需求类型]-->
+    <div class="modal fade" id="modals3" data-backdrop="true">
+
+      <!--data-backdrop="static"单击背景不关闭弹出窗，默认值为data-backdrop="true"-->
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">需求类型</h2>
+
+          <!-- 模态弹出窗内容 -->
+
+
+          <div class="chart44" style="height: 7rem;width: 9rem;top:20px"></div>
+
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+
+    <!-- 模态弹出窗 [业务类型趋势变化]-->
+    <div class="modal fade" id="modals4" data-backdrop="true">
+
+      <!--data-backdrop="static"单击背景不关闭弹出窗，默认值为data-backdrop="true"-->
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">业务类型趋势变化</h2>
+
+          <!-- 模态弹出窗内容 -->
+
+
+          <div class="chart55" style="height: 7rem;width: 9rem;top:20px"></div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 模态弹出窗 [企业工单TOP10]-->
+    <div class="modal fade" id="gd" data-backdrop="true" style="font-size: 16px !important;">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn"
+          style="background: rgba(255, 255, 255, 0.04) url(../images/line\(1\).png);">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">企业工单详情</h2>
+          <!-- 模态弹出窗内容 -->
+          <table class="table table-bordered" style="color: white;">
+            <thead>
+              <tr>
+                <th>企业名称</th>
+                <th>数量</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>北京么哒互动文化发展有限公司</td>
+
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>北京新锐互联科技有限公司</td>
+
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>北京润通丰华科技有限公司</td>
+
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>北京城建集团有限责任公司</td>
+
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>北京华商基业管理咨询有限公司</td>
+
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>北京恬适健康管理有限公司</td>
+
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>北京鑫康合生物医药科技有限公司</td>
+
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>北京亿连华泰酒店有限公司</td>
+
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>北京权品品牌管理有限责任公司</td>
+
+                <td>1</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 模态弹出窗 [催办]-->
+    <div class="modal fade" id="cb" data-backdrop="true" style="font-size: 16px !important;">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn"
+          style="background: rgba(255, 255, 255, 0.04) url(../images/line\(1\).png);">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">催办详情</h2>
+          <!-- 模态弹出窗内容 -->
+          <table class="table table-bordered" style="color: white;">
+            <thead>
+              <tr>
+                <th>企业名称</th>
+                <th>需求标题</th>
+                <th>问题类型</th>
+                <th>承办单位</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>北京居山科技有限公司</td>
+                <td>咨询海淀区暖企新六条政策</td>
+                <td>综合协调</td>
+                <td>中关村科学城管委会</td>
+              </tr>
+              <tr>
+                <td>北京新锐互联科技有限公司</td>
+                <td>咨询房租减免和新九条相关政策</td>
+                <td>政策法律服务</td>
+                <td>海淀街道</td>
+              </tr>
+              <tr>
+                <td>北京伟力嘉美信医疗美容门诊部有限公司</td>
+                <td>客户什么时间可以进入小区</td>
+                <td>疫情管控协调</td>
+                <td>区金融办科室</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 模态弹出窗 [督办]-->
+    <div class="modal fade" id="db" data-backdrop="true" style="font-size: 16px !important;">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn"
+          style="background: rgba(255, 255, 255, 0.04) url(../images/line\(1\).png);">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">督办详情</h2>
+          <!-- 模态弹出窗内容 -->
+          <table class="table table-bordered" style="color: white;">
+            <thead>
+              <tr>
+                <th>企业名称</th>
+                <th>需求标题</th>
+                <th>问题类型</th>
+                <th>承办单位</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>北京亿连华泰酒店有限公司</td>
+                <td>酒店复工流程</td>
+                <td>疫情管控协调</td>
+                <td>花园路街道科室</td>
+              </tr>
+              <tr>
+                <td>北京八号炫酷台球俱乐部有限公司</td>
+                <td>台球俱乐部复工问题</td>
+                <td>综合协调</td>
+                <td>清河街道科室</td>
+              </tr>
+              <tr>
+                <td>北京双鹭药业股份有限公司</td>
+                <td>独立办公楼装修问题</td>
+                <td>疫情管控协调</td>
+                <td>区发改委科室</td>
+              </tr>
+              <tr>
+                <td>北京德厚康大药房有限公司</td>
+                <td>房租减免问题</td>
+                <td>综合协调</td>
+                <td>花园路街道科室</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 渠道排行 [第一列]-->
+    <div class="modal fade" id="qdph-1" data-backdrop="true">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn"
+          style="background: rgba(255, 255, 255, 0.04) url(../images/line\(1\).png);">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">渠道排行</h2>
+          <!-- 模态弹出窗内容 -->
+          <form class="form-horizontal" role="form" style="color: white;">
+            <fieldset disabled>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_host">公司名称</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_host" type="text" value="企业复工复产" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_name">数量</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="83" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_username">类型</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_username" type="text" value="复工" />
+                </div>
+
+              </div>
+            </fieldset>
+            <fieldset>
+
+              <div class="form-group">
+                <label for="disabledSelect" class="col-sm-2 control-label">内容</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3">
+本企业在背景，海淀区北京大学旁，受疫情影响以及停产153天,目前北京已经解除,是否可以复工。
+                    </textarea>
+
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 渠道排行 [第二列]-->
+    <div class="modal fade" id="qdph-2" data-backdrop="true">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn"
+          style="background: rgba(255, 255, 255, 0.04) url(../images/line\(1\).png);">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">渠道排行</h2>
+          <!-- 模态弹出窗内容 -->
+          <form class="form-horizontal" role="form" style="color: white;">
+            <fieldset disabled>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_host">公司名称</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_host" type="text" value="启航直通中心" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_name">数量</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="365" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_username">类型</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_username" type="text" value="服务" />
+                </div>
+
+              </div>
+            </fieldset>
+            <fieldset>
+
+              <div class="form-group">
+                <label for="disabledSelect" class="col-sm-2 control-label">内容</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3">
+本企业在背景，海淀区北京大学旁，受疫情影响以及停产153天,目前北京已经解除,是否可以复工。
+                    </textarea>
+
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 渠道排行 [第三列]-->
+    <div class="modal fade" id="qdph-3" data-backdrop="true">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn"
+          style="background: rgba(255, 255, 255, 0.04) url(../images/line\(1\).png);">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">渠道排行</h2>
+          <!-- 模态弹出窗内容 -->
+          <form class="form-horizontal" role="form" style="color: white;">
+            <fieldset disabled>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_host">公司名称</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_host" type="text" value="市12345" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_name">数量</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="0" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_username">类型</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_username" type="text" value="服务" />
+                </div>
+
+              </div>
+            </fieldset>
+            <fieldset>
+
+              <div class="form-group">
+                <label for="disabledSelect" class="col-sm-2 control-label">内容</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3">
+本企业在背景，海淀区北京大学旁，受疫情影响以及停产153天,目前北京已经解除,是否可以复工。
+                    </textarea>
+
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 渠道排行 [第四列]-->
+    <div class="modal fade" id="qdph-4" data-backdrop="true">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn"
+          style="background: rgba(255, 255, 255, 0.04) url(../images/line\(1\).png);">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">渠道排行</h2>
+          <!-- 模态弹出窗内容 -->
+          <form class="form-horizontal" role="form" style="color: white;">
+            <fieldset disabled>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_host">公司名称</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_host" type="text" value="部门主动服务" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_name">数量</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="0" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_username">类型</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_username" type="text" value="服务" />
+                </div>
+
+              </div>
+            </fieldset>
+            <fieldset>
+
+              <div class="form-group">
+                <label for="disabledSelect" class="col-sm-2 control-label">内容</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3">
+本企业在背景，海淀区北京大学旁，受疫情影响以及停产153天,目前北京已经解除,是否可以复工。
+                    </textarea>
+
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 渠道排行 [第五列]-->
+    <div class="modal fade" id="qdph-5" data-backdrop="true">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn"
+          style="background: rgba(255, 255, 255, 0.04) url(../images/line\(1\).png);">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">渠道排行</h2>
+          <!-- 模态弹出窗内容 -->
+          <form class="form-horizontal" role="form" style="color: white;">
+            <fieldset disabled>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_host">公司名称</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_host" type="text" value="海淀区APP" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_name">数量</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="0" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_username">类型</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_username" type="text" value="服务" />
+                </div>
+
+              </div>
+            </fieldset>
+            <fieldset>
+
+              <div class="form-group">
+                <label for="disabledSelect" class="col-sm-2 control-label">内容</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3">
+本企业在背景，海淀区北京大学旁，受疫情影响以及停产153天,目前北京已经解除,是否可以复工。
+                    </textarea>
+
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 渠道排行 [第六列]-->
+    <div class="modal fade" id="qdph-6" data-backdrop="true">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn"
+          style="background: rgba(255, 255, 255, 0.04) url(../images/line\(1\).png);">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">渠道排行</h2>
+          <!-- 模态弹出窗内容 -->
+          <form class="form-horizontal" role="form" style="color: white;">
+            <fieldset disabled>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_host">公司名称</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_host" type="text" value="掌上海淀APP" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_name">数量</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="0" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_username">类型</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_username" type="text" value="服务" />
+                </div>
+
+              </div>
+            </fieldset>
+            <fieldset>
+
+              <div class="form-group">
+                <label for="disabledSelect" class="col-sm-2 control-label">内容</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3">
+本企业在背景，海淀区北京大学旁，受疫情影响以及停产153天,目前北京已经解除,是否可以复工。
+                    </textarea>
+
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 一般、疑难 [第一列]-->
+    <div class="modal fade" id="ybyn-1" data-backdrop="true" style="font-size: 18px !important;">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">一般、疑难详细</h2>
+          <!-- 模态弹出窗内容 -->
+          <form class="form-horizontal" role="form" style="color: white;">
+            <fieldset disabled>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_host">公司名称</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_host" type="text" value="滴滴出行科技有限公司北京分公司" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_name">问题类型</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="疫情管控协调" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_username">承办单位</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_username" type="text" value="上地街道" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_name">标题</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="申请员工隔离问题" />
+                </div>
+
+              </div>
+            </fieldset>
+            <fieldset>
+              <div class="form-group">
+                <label for="disabledSelect" class="col-sm-2 control-label">内容</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3">
+    企业员工从山东来北京实习，还没有固定的居住场所，申请集中隔离，员工对海淀不是很了解，麻烦相关部门工作人员解答。名称：滴滴出行科技有限公司北京分公司  地址：北京市海淀区东北旺西路8号院  注意：请按以下方式回复处理结果，X年X月X日，X时X分，xx单位xx部门（处、科、室、xxx）工作人员电话xxx（通过哪个电话号码给企业来电人拨打的电话）联系企业来电人xxx(来电人电话号码)，就企业咨询问题进行了答复，答复内容为：（根据xxxxx政策，）xxxxx（具体答复内容）。企业来电人对答复表示xxxxx（满意/不满意/认可/不认可/知晓）。
+                    </textarea>
+
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 一般、疑难 [第二列]-->
+    <div class="modal fade" id="ybyn-2" data-backdrop="true">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">一般、疑难详细</h2>
+          <!-- 模态弹出窗内容 -->
+          <form class="form-horizontal" role="form" style="color: white;">
+            <fieldset disabled>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_host">公司名称</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_host" type="text" value="北京快手科技有限公司" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_name">问题类型</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="疫情管控协调" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_username">承办单位</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_username" type="text" value="上地街道" />
+                </div>
+
+                <label class="col-sm-2 control-label" for="ds_name">标题</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="武汉人员没有固定住所如何返京复工问题" />
+                </div>
+
+              </div>
+            </fieldset>
+            <fieldset>
+
+              <div class="form-group">
+                <label for="disabledSelect" class="col-sm-2 control-label">内容</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3">
+   来电人表示自己要从武汉返京，但是没有固定住所没办法隔离，想咨询这种情况如何返京复工。（来电人拨打12345告知她咨询疾控中心，但是疾控中心告诉来电人咨询海淀区复工复产热线）公司吗名称：北京快手科技有限公司，公示地址：北京市海淀区上地西路6号1幢1层101 D1-10，所属街镇：上地街道。注意：请按以下方式回复处理结果，X年X月X日，X时X分，xx单位xx部门（处、科、室、xxx）工作人员电话xxx（通过哪个电话号码给企业来电人拨打的电话）联系企业来电人xxx(来电人电话号码)，就企业咨询问题进行了答复，答复内容为：（根据xxxxx政策，）xxxxx（具体答复内容）。企业来电人对答复表示xxxxx（满意/不满意/认可/不认可/知晓）。
+                    </textarea>
+
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 一般、疑难 [第三列]-->
+    <div class="modal fade" id="ybyn-3" data-backdrop="true">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">一般、疑难详细</h2>
+          <!-- 模态弹出窗内容 -->
+          <form class="form-horizontal" role="form" style="color: white;">
+            <fieldset disabled>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_host">公司名称</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_host" type="text" value="中科泰岳（北京）科技有限公司" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_name">问题类型</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="重大项目建设" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_username">承办单位</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_username" type="text" value="区发改委" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_username">标题</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_username" type="text" value="咨询企业什么工程类企业时候可以复工" />
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+
+              <div class="form-group">
+                <label for="disabledSelect" class="col-sm-2 control-label">内容</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3">
+    咨询企业什么工程类企业时候可以复工。来电人是海淀区一企业工作人员，表示公司有从事工程类业务，会委派施工人员到所投资合作的企业参与施工。想咨询此类型企业什么时候可以复工？复工需要办理什么手续？合作方是否也需要申请办理复工才可以开展经营活动？    公司名称：中科泰岳（北京）科技有限公司   公司地址：北京市海淀区中关村南大街5号683号楼1409室     所属街道：咨询过来电人，但表示不太清楚。  注：请及时与来电人反馈办理情况。
+                    </textarea>
+
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 一般、疑难 [第四列]-->
+    <div class="modal fade" id="ybyn-4" data-backdrop="true">
+
+      <div class="modal-dialog">
+
+        <div class="modal-conten animated fadeIn">
+
+          <h2 class="modal-title" style="text-align: center;color:yellowgreen">一般、疑难详细</h2>
+          <!-- 模态弹出窗内容 -->
+          <form class="form-horizontal" role="form" style="color: white;">
+            <fieldset disabled>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_host">公司名称</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_host" type="text" value="北京联信通移动互联公司" />
+                </div>
+                <label class="col-sm-2 control-label" for="ds_name">数量</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_name" type="text" value="83" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ds_username">类型</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="ds_username" type="text" value="民企" />
+                </div>
+
+              </div>
+            </fieldset>
+            <fieldset>
+
+              <div class="form-group">
+                <label for="disabledSelect" class="col-sm-2 control-label">内容</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3">
+本企业在背景，海淀区北京大学旁，受疫情影响以及停产153天,目前北京已经解除,是否可以复工。
+                    </textarea>
+
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="column" style="width:3.75rem;">
+
+      <div class="panelzdy bar1">
+        <h2> <a data-toggle="modal" href="#modals-qylx" class=" btn btn-primary">企业类型</a></h2>
+
+        <div class="chart"> </div>
+
+
+        <div class="panelzdy-footer"></div>
+      </div>
+      <div class="panelzdy pie2">
+
+        <h2> <a data-toggle="modal" href="#modals-rdwt" class=" btn btn-primary">热点问题</a></h2>
+        <div id="ccc" class="chart"></div>
+        <div class="panelzdy-footer"></div>
+      </div>
+
+      <div class="panelzdy pie1">
+        <h2><a data-toggle="modal" href="#" class=" btn btn-primary" style="pointer-events: none;">疑难工单</a></h2>
+
+        <div class="table-responsive">
+          <table class="table text-nowrap table-bordered table-hover"
+            style="color:rgba(255,255,255,.6);border: 1px solid rgba(255,255,255,.6);font-size:10px">
+            <thead>
+              <tr>
+                <th>企业名称</th>
+                <th>问题类型</th>
+                <th>承办单位</th>
+
+              </tr>
+            </thead>
+            <tbody class="ybyn">
+              <tr>
+                <td>滴滴出行...</td>
+                <td>疫情管控协调</td>
+                <td>上地街道</td>
+
+              </tr>
+              <tr>
+                <td>北京快手...</td>
+                <td>疫情管控协调</td>
+                <td>上地街道</td>
+              </tr>
+              <tr>
+                <td>中科泰岳...</td>
+                <td>重大项目建设</td>
+                <td>区发改委</td>
+              </tr>
+
+            </tbody>
+          </table>
+          <!-- <a style="margin-left: 2.7rem;">下一页</a> -->
+        </div>
+
+
+        <div class="panelzdy-footer"></div>
+      </div>
+    </div>
+
+    <div class="column"
+      style="background-size: 100%;background-repeat:no-repeat;width: 7.5rem !important;width: auto;height: 11.1rem; max-width: 100%;max-height: 100%; margin-top: 0.9rem;border-radius:10px">
+      <div class="no">
+        <!--  <div class="no-hd">
+          <ul>
+            <li id="showTime"></li>
+          </ul>
+        </div> -->
+        <div
+          style="text-align: center;color: dodgerblue;font-size: 0.2rem;margin-top: 0.1rem;text-align:center;line-height:0.9rem">
+          <div style="float:left;width: 31%;height: 1rem;border:3px solid #87CEFA;border-radius: 8px;font-weight: 900;">
+            <img src="images/fugong.png" height="35px" width="35px">
+            复工复产
+          </div>
+          <div
+            style="float:left;width: 34%;margin-left:0.15rem;height: 1rem;border:3px solid #87CEFA;border-radius: 8px;font-weight: 900; ">
+            <img src="images/qihangxiaocx.png" height="35px" width="35px">
+            启航小程序
+          </div>
+          <div
+            style="float:right;width: 31%;height: 1rem;border:3px solid #87CEFA;border-radius: 8px;font-weight: 900;">
+            <img src="images/qihangAPP.png" height="35px" width="35px">
+            启航APP
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="map">
+        <!-- <img src="images/shou.png" alt="" style="background-image: url('images/shou.png');width: auto;height: 4rem; max-width: 100%;max-height: 100%; margin-top: 0.9rem;border-radius:10px"> -->
+        <!--  <div class="map1"></div>
+        <div class="map2"></div>
+        <div class="map3"></div> -->
+      </div>
+      <div style="text-align: center;color: dodgerblue;margin-top: 1rem;">
+        <div style="float:left;width: 31%;margin-left:0.65rem;height: 1rem;font-weight: 900; ">
+
+
+          <div style="position:relative;">
+
+            　　<img src="images/dawutai.png" width="180px" height="150px" style="border-radius:30px;margin-top: -48px;">
+
+            　　<div style="position:absolute; z-index:2; left:50px; top:0px;font-size: 0.4rem;">
+              <h2> <a data-toggle="modal" href="#" class=" btn btn-primary" style="font-size: 0.4rem">政府</a></h2>
+              　　
+            </div>
+          </div>
+
+        </div>
+
+        <div style="float:right;width: 31%;margin-right:0.8rem;height: 1rem;font-weight: 900; ">
+          <div style="position:relative;">
+
+            　　<img src="images/dawutai.png" width="160px" height="130px" style="border-radius:30px;margin-top: -37px;">
+
+            　　<div style="position:absolute; z-index:2; left:50px; top:0px;font-size: 0.4rem;">
+
+              <h2> <a data-toggle="modal" href="#" class=" btn btn-primary"
+                  style="font-size: 0.4rem;pointer-events: none;">企业</a></h2>
+              　　
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- <img src="images/woshou.jpg" style="opacity:0.15;"/> -->
+    </div>
+
+    <div class="column" style="width:3.9rem;">
+      <div class="panelzdy bar2">
+        <h2> <a data-toggle="modal" href="#modals2" class=" btn btn-primary">工单状态</a></h2>
+        <div class="chart"></div>
+        <div class="panelzdy-footer"></div>
+      </div>
+      <div class="panelzdy line2">
+
+        <h2> <a data-toggle="modal" href="#" class=" btn btn-primary" style="pointer-events: none;">服务督办</a></h2>
+        <div id="ccs" class="chart"></div>
+        <div class="panelzdy-footer"></div>
+      </div>
+
+
+      <div class="panelzdy pie">
+        <h2> <a data-toggle="modal" href="#modals" class=" btn btn-primary">承办单位</a></h2>
+        <div class="chart"></div>
+        <div class="panelzdy-footer"></div>
+      </div>
+
+    </div>
+
+
+    <div class="column" style="width:3.75rem;">
+      <div class="panelzdy bar3">
+        <h2> <a data-toggle="modal" href="#modals3" class=" btn btn-primary">需求类型</a></h2>
+        <div class="chart"></div>
+        <div class="panelzdy-footer"></div>
+      </div>
+      <div class="panelzdy line3" style="height: 7.938rem;">
+        <h2> <a data-toggle="modal" href="#modals4" class=" btn btn-primary">业务类型趋势变化</a></h2>
+        <div class="chart" style="height: 5.2rem;width: rem;top: 1.2rem;"></div>
+        <div class="panelzdy-footer"></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/flexible.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/china.js"></script>
+
+  <!-- <script src="js/jquery.limarquee.js"></script> -->
+
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+  var myChart = echarts.init(document.getElementById('ccc'));
+  var plantCap = [{
+    name: '综合协调',
+    value: '35'
+  }, {
+    name: '疫情管控协调',
+    value: '33'
+  }, {
+    name: '返岗用工',
+    value: '8'
+  }, {
+    name: '政策法律服务',
+    value: '4'
+  }, {
+    name: '重大项目建设',
+    value: '1'
+  }];
+  var datalist = [{
+    offset: [56, 48],
+    symbolSize: 65,
+    // opacity: .95,
+    color: '#FFA07A',
+
+  }, {
+
+    offset: [30, 70],
+    symbolSize: 55,
+    color: '#F5DEB3'
+  }, {
+    offset: [5, 43],
+    symbolSize: 45,
+    color: '#AFEEEE'
+
+  }, {
+    offset: [93, 30],
+    symbolSize: 35,
+    color: '#FFB5C5'
+  }, {
+    offset: [26, 19],
+    symbolSize: 25,
+    color: '#F0F8FF'
+  }];
+
+  var datas = [];
+  for (var i = 0; i < plantCap.length; i++) {
+    var item = plantCap[i];
+    var itemToStyle = datalist[i];
+    datas.push({
+      name: item.value + '\n' + item.name,
+      value: itemToStyle.offset,
+      symbolSize: itemToStyle.symbolSize,
+      label: {
+        normal: {
+          textStyle: {
+            fontSize: 12
+          }
+        }
+      },
+
+      itemStyle: {
+        normal: {
+          color: itemToStyle.color,
+          opacity: itemToStyle.opacity
+        }
+      },
+    })
+  }
+  option = {
+    grid: {
+      show: false,
+      top: 10,
+      bottom: 10
+    },
+
+    xAxis: [{
+      gridIndex: 0,
+      type: 'value',
+      show: false,
+      min: 0,
+      max: 100,
+      nameLocation: 'middle',
+      nameGap: 5
+    }],
+
+    yAxis: [{
+      gridIndex: 0,
+      min: 0,
+      show: false,
+      max: 100,
+      nameLocation: 'middle',
+      nameGap: 30
+    }],
+    series: [{
+      type: 'scatter',
+      symbol: 'circle',
+      symbolSize: 120,
+      label: {
+        normal: {
+          show: true,
+          formatter: '{b}',
+          color: '#FFF',
+          textStyle: {
+            fontSize: '12'
+          }
+        },
+      },
+      itemStyle: {
+        normal: {
+          color: '#F30'
+        }
+      },
+      data: datas
+    }]
+
+  };
+  myChart.setOption(option);
+  $(document).ready(function () {
+    myChart.resize();
+
+  })
+  window.addEventListener("resize", function () {
+    myChart.resize();
+  });
+</script>
+
+<script>
+  $(function () {
+    var $this = $("#news");
+    var scrollTimer;
+    $this.hover(function () {
+      clearInterval(scrollTimer);
+    }, function () {
+      scrollTimer = setInterval(function () {
+        scrollNews($this);
+      }, 1000);
+    }).trigger("mouseleave");
+
+    function scrollNews(obj) {
+      var $self = obj.find("ul");
+      var lineHeight = $self.find("li:first").height();
+      $self.animate({
+        "marginTop": -lineHeight + "px"
+      }, 300, function () {
+        $self.css({
+          marginTop: 0
+        }).find("li:first").appendTo($self);
+      })
+    }
+  })
+</script>
+
+
+<!-- 弹出大图表 4.30-->
+<script>
+  $('#modals-rdwt').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#modals-rdwt .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+
+  $('#modals-qylx').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#modals-qylx .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+
+
+  $('#qdph-qd1').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#qdph-qd1 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+
+  $('#ybyn-1').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#ybyn-1 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+  $('#ybyn-2').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#ybyn-2 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+  $('#ybyn-3').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#ybyn-3 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+  $('#ybyn-4').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#ybyn-4 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+
+  $('#gd').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#gd .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+  $('#modals').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#modals .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+
+  $('#modals2').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#modals2 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+  $('#modals3').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#modals3 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+  $('#modals4').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#modals4 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+  $('#modals4').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#modals4 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+  $('#cb').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#cb .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+  $('#db').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#db .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+  $('#qdph-1').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#qdph-1 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+  $('#qdph-2').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#qdph-2 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+  $('#qdph-3').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#qdph-3 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+  $('#qdph-4').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#qdph-4 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+  $('#qdph-5').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#qdph-5 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+  $('#qdph-6').on('show.bs.modal', function (e) {
+    // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+    $(this).css('display', 'block');
+    var modalHeight = $(window).height() / 2 - $('#qdph-6 .modal-dialog').height() / 2;
+    $(this).find('.modal-dialog').css({
+      'margin-top': modalHeight
+    });
+  });
+
+  $('#modals').on('shown.bs.modal', function (e) {
+    cbdw();
+  });
+  $('#modals2').on('shown.bs.modal', function (e) {
+    gdzt();
+  });
+  $('#modals3').on('shown.bs.modal', function (e) {
+    xqlx();
+  });
+  $('#modals4').on('shown.bs.modal', function (e) {
+    ywlxqs();
+  });
+
+  $('#modals-qylx').on('shown.bs.modal', function (e) {
+    qylx();
+  });
+
+
+  $('#modals-rdwt').on('shown.bs.modal', function (e) {
+    rdwt();
+  });
+</script>
+
+
+
+<!-- 催办、督办点击柱子弹出事件 -->
+<script>
+  var myChart = echarts.init(document.querySelector(".line2 .chart"));
+  myChart.on('click', function (param) {
+    // 催办
+    if (param.dataIndex == 0) {
+
+      $('#cb').modal('show');
+
+    }
+    // 督办
+    else if (param.dataIndex == 1) {
+      $('#db').modal('show');
+
+    }
+  });
+</script>
+
+
+<!-- 点击企业工单TOP10，弹出事件 -->
+<!-- <script>
+ $('ul').on('click','li',function () {
+     if($(this).index()==1){
+alert("1")
+     }
+       
+			});
+</script> -->
+
+
+<!-- 点击渠道排行，弹出事件 -->
+<script>
+  $('.QDPH td').click(function () {
+
+    //获取tr下标
+    /* var rowIndex = $(this).closest("tr").index();
+
+         if(rowIndex==1){
+          $('#qdph-1').modal('show');
+         }
+         else if(rowIndex==2){
+          $('#qdph-2').modal('show');
+         }
+         else if(rowIndex==3){
+          $('#qdph-3').modal('show');
+          }
+          else if(rowIndex==4){
+            $('#qdph-4').modal('show');
+          }
+          else if(rowIndex==5){
+            $('#qdph-5').modal('show');
+          }
+          else if(rowIndex==6){
+            $('#qdph-6').modal('show');
+          } */
+
+  });
+</script>
+
+
+<!-- tr移入弹出div  [一般；疑难] -->
+<script>
+  $('.ybyn tr').click(function () {
+
+    //获取tr下标
+    var rowIndex = $(this).closest("tr").index();
+
+    if (rowIndex == 0) {
+      $('#ybyn-1').modal('show');
+    } else if (rowIndex == 1) {
+      $('#ybyn-2').modal('show');
+    } else if (rowIndex == 2) {
+      $('#ybyn-3').modal('show');
+    } else if (rowIndex == 3) {
+      $('#ybyn-4').modal('show');
+    }
+
+  });
+</script>
